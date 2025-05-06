@@ -14,10 +14,10 @@ window.onload = function() {
   let what = ['my homework', 'my phone', 'the car'];
   let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-  let random4 = Math.floor(Math.random*4);
-  let random3 = Math.floor(Math.random*3);
-  let random5 = Math.floor(Math.random*5);
-  console.log(who[random4]+action[random4]+what[random3]+when[random5]);
-  document.getElementById("excuse").innerHTML=who[random4]+action[random4]+what[random3],when[random5];
-
+  let random4who = Math.floor(Math.random()*who.length);
+  let random4action = Math.floor(Math.random()*action.length);
+  let random3 = Math.floor(Math.random()*what.length);
+  let random5 = Math.floor(Math.random()*when.length);
+  console.log(who[random4who]+" "+action[random4action]+" "+what[random3]+" "+when[random5]);
+  document.getElementById("excuse").innerHTML=who[random4who]+" "+action[random4action]+" "+what[random3]+" "+when[random5];
 };
